@@ -14,5 +14,14 @@ continuar = false
    console.log("Informe suas informaçoes novamente!")
 }
 }
-let salario = 0; 
+
+let aumento = 1.5; 
+console.log("previsao salarial para os proximos 10 anos:")
+for(i = 1; i <= 10; i++){
+   salario += salario * aumento
+   aumento *= 2
+   console.log((2023 + i) + " = R$ " + salario)
+}
+
+
 
