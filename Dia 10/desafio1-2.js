@@ -1,3 +1,4 @@
+
 array = []
 for (let index = 0; index < 5; index++) {
     numerosAoUsuario = prompt("Digite o " + (index + 1) + " ° numero")
