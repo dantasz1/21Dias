@@ -2,7 +2,7 @@ continuar = true
 modelo = []
 ano = []
 valor = []
-posicaoArray = []
+posicaoArray = 0;
 
 while (continuar) {
     modelos = (prompt("Qual o modelo do seu carro?"))
@@ -35,24 +35,22 @@ for (let i = 0; i < valor.length - 1; i++) {
 for (let ii = 0; ii < valor.length - 1 ; ii++) {
     if(valor[ii] > valor[ii + 1]){
 
+    maiorValorModelo = modelo[ii]
+    modelo[ii] = modelo[ii + 1]
+    modelo[ii + 1] = maiorValorModelo
 
+    maiorValor = valor[ii]
+    valor[ii] = valor[ii + 1]
+    valor[ii+ 1] = maiorValor
 
-
-
-
-
-
-        
-    }
-    
+    maiorAno = ano[ii]
+    ano[ii] = ano[ii + 1]
+    ano[ii + 1] = maiorAno }
 }
-
 }
-
-
 
 console.log("ordenar os carros pelo preço: ")
 for (let i = 0; i < modelo.length; i++) {
-    console.log(modelo[i] + " - " + ano[i] + " - " + valor[i])
+    console.log(modelo[i] + " - " + valor[i] + " - " + ano[i])
     
 }
