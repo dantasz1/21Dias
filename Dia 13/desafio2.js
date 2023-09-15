@@ -27,3 +27,5 @@ let classeCarros =new carro("Ferrari" , 800 , 320  , 2.5  )
 classeCarros.ApresentarInformacoes()
 let resultado = classeCarros.CalcularTempoMedio(1000)
 console.log(resultado);
+
+
