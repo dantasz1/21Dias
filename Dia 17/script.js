@@ -46,7 +46,7 @@ function CadastroHotel() {
 function CadastroReserva() {
 
     idHotel = prompt("digite o id do hotel")
-    if (!hoteis.some(hotel => hotel.Id === idHotel)) {
+    if (hoteis.some(hotel => hotel.Id === idHotel)) {
         console.log("Id invalido. Por favor insira um Id valido")
         return;
     }
@@ -129,21 +129,22 @@ case '3' : IdDoHotel(prompt("Digite o Id do hotel"))
         break;
 case '4' : ProcurarHotelPelaReserva(prompt("Digite o Id da reserva"))
         break;
-case '5' : Name(("Digite o nome do responsavel ")) 
+case '5' : Name(prompt("Digite o nome do responsavel ")) 
         break;
-case '6' : let AcharCategoriaHotel = Categorias(parseInt("Digite a categoria que deseja achar"))
+case '6' : let AcharCategoriaHotel = Categorias(parseInt(prompt(("Digite a categoria que deseja achar"))))
 console.log(AcharCategoriaHotel)
         break;  
-case '7' : let idDoHotel = NumeroAndID("Digite o numero do id q deseja atualizar")
+case '7' : let idDoHotel = NumeroAndID(prompt("Digite o numero do id q deseja atualizar"))
             let numero = prompt("digite seu novo telefone")
 NumeroAndID(idDoHotel,numero)
         break;
+        
 case '8' : 
 console.log("Programa encerrado")
-        continuar = false
+        continuar = false;
                 break;
+                
     default:
-
 console.log("opçao invalida")
         break;
 }
